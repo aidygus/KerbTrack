@@ -78,13 +78,12 @@ public class KerbTrack : MonoBehaviour
         }
     }
 
-
     void Start()
     {
         Debug.Log("KerbTrack: Starting");
         GameEvents.onGamePause.Add(new EventVoid.OnEvent(OnPause));
         GameEvents.onGameUnpause.Add(new EventVoid.OnEvent(OnUnPause));
-        RenderingManager.AddToPostDrawQueue(3, new Callback(drawGUI));
+        //RenderingManager.AddToPostDrawQueue(3, new Callback(drawGUI));
         LoadSettings();
         ChangeTracker((Trackers)activeTracker);
     }
@@ -104,7 +103,7 @@ public class KerbTrack : MonoBehaviour
     }
 
     public void OnUnPause()
-    {
+	{
         guiVisible = false;
     }
 
@@ -118,6 +117,7 @@ public class KerbTrack : MonoBehaviour
 
         string statusText = (trackerEnabled ? "Enabled" : "Disabled") +
             " (" + Enum.GetName(toggleEnabledKey.GetType(), toggleEnabledKey) + ")";
+		Debug.Log ("Head Tracker " + (trackerEnabled ? "Enabled" : "Disabled"));
         GUILayout.Label(statusText);
 
         if (activeTracker == (int)Trackers.Joystick)
@@ -196,7 +196,7 @@ public class KerbTrack : MonoBehaviour
         GUI.DragWindow();
     }
 
-    protected void drawGUI()
+    protected void OnGUI()
     {
         if (guiVisible)
             windowPos = GUILayout.Window(-5234628, windowPos, mainGUI, "KerbTrack", GUILayout.Width(250), GUILayout.Height(50));

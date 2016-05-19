@@ -80,14 +80,17 @@
     <Reference Include="TrackIRUnity">
       <HintPath>..\kerbtrackv1\x86\GameData\KerbTrack\TrackIRUnity.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\usr\games\KSP_linux\KSP_Data\Managed\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\usr\games\KSP_linux\KSP_Data\Managed\UnityEngine.dll</HintPath>
-    </Reference>
     <Reference Include="aaa_Toolbar">
       <HintPath>..\..\..\..\usr\games\KSP_linux\GameData\000_Toolbar\Toolbar.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\.local\share\Steam\SteamApps\common\Kerbal Space Program\KSP_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\.local\share\Steam\SteamApps\common\Kerbal Space Program\KSP_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="KSPUtil">
+      <HintPath>..\..\.local\share\Steam\SteamApps\common\Kerbal Space Program\KSP_Data\Managed\KSPUtil.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
